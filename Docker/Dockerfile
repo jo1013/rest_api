@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.10
 
 MAINTAINER Sawyer "tkdah0@gmail.com"
 
@@ -6,7 +6,7 @@ MAINTAINER Sawyer "tkdah0@gmail.com"
 ARG DEBIAN_FRONTEND=noninteractiv
 
 
-RUN apt update
+RUN apt-get update
 
 
 RUN apt install software-properties-common -y
@@ -34,9 +34,12 @@ RUN pip3 install matplotlib
 RUN pip3 install folium
 RUN jupyter notebook --generate-config --allow-root
 RUN echo "c.NotebookApp.password = u'sha1:6a3f528eec40:6e896b6e4828f525a6e20e5411cd1c8075d68619'" >> /root/.jupyter/jupyter_notebook_config.py
+RUN pip3 install fastapi
+RUN pIp3 install uvicorn
+
 
 EXPOSE 8888
 
-ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser
+ENTRYPOINT jupyter notebook --allow-root --ip=0.0.0.0 --port=8333 --no-browser
 
 

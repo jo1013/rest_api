@@ -1,0 +1,83 @@
+
+
+
+
+
+
+
+
+	
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+table {width:100%;border-top:1px solid #737678;}
+td {border:1px solid #cccccc;text-align:center;vertical-align:middle;}
+</style>
+
+<h2>이륜차 교통사고</h2>
+<table>
+	<thead>
+		<tr bgcolor="#ebf2f7">
+			<th>년도</th>
+			<th>사고건수(건)</th>  
+			<th>사망자수(명)</th>
+			<th>부상자수(명)</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+		<tr>
+			<td>2016</td>
+			<td>13,076</td>
+			<td>428</td>
+			<td>15,773</td>
+		</tr>
+		
+		<tr>
+			<td>2017</td>
+			<td>13,730</td>
+			<td>406</td>
+			<td>16,720</td>
+		</tr>
+		
+		<tr>
+			<td>2018</td>
+			<td>15,032</td>
+			<td>410</td>
+			<td>18,621</td>
+		</tr>
+		
+		<tr>
+			<td>2019</td>
+			<td>18,467</td>
+			<td>422</td>
+			<td>23,584</td>
+		</tr>
+		
+		<tr>
+			<td>2020</td>
+			<td>18,280</td>
+			<td>439</td>
+			<td>23,673</td>
+		</tr>
+		
+	</tbody>
+</table>
+
+</body>
+</html>
