@@ -28,19 +28,38 @@ async def read_root():
 
 
 
-
 @app.get("/{kind}/{year}/{doc}")
 async def read_doc(kind: str , year:int, doc:str):
     t = application.APP.main(kind, year, doc)
     result = jsonable_encoder(t)
     return result
 
+@app.get("/{kind_doc}")
+async def read_doc(kind_doc: str ):
+    t = application.APP.kind_or_doc(kind_doc)
+    result = jsonable_encoder(t)
+    return result
 
-# @app.get("/bicycle")
-# @app.get("/dawn")
-# @app.get("/old")
-# @app.get("/pedestrian")
-# @app.get("/all")
+
+@app.get("/{year}")
+async def read_doc(year:int):
+    t = application.APP.year_method(year)
+    result = jsonable_encoder(t)
+    return result
+
+
+@app.get("/{kind}/{year}")
+async def read_doc(kind: str , year:int):
+    t = application.APP.kind_and_year(kind, year)
+    result = jsonable_encoder(t)
+    return result
+
+
+
+
+
+
+
 
 
 
