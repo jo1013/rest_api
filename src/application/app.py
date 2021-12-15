@@ -1,9 +1,8 @@
 import os
 import sys
 import pandas as pd
-
-
 from . import ENUM
+
 sys.path.append(os.path.dirname(os.path.abspath( __file__ ))) #py용
 import dir_path as PATH
 
@@ -23,7 +22,8 @@ class APP :
         kind_list = df['대상사고 구분명'] == ENUM.transform[kind].value
         year_list = df['연도'] == year
         doc = ENUM.transform[doc].value
-        return df[kind_list & year_list][doc].to_dict('record')
+        # return df[kind_list & year_list][doc].to_dict('record')
+        return df[kind_list & year_list][doc].to_list()
     
     
     def kind_or_doc(kind_doc :str):

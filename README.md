@@ -37,14 +37,16 @@ $ jupyter notebook --allow-root --ip=0.0.0.0 --port=[포트] --no-browser
 ```
 
 
-```
-$ uvicorn app:app --reload --host=0.0.0.0 --port=8000
-$ uvicorn app:app --reload --host=0.0.0.0 --port=[포트]
-
+### app있는 폴더에서 서버 실행
 ```
 
+~~ $ uvicorn app:app --reload --host=0.0.0.0 --port=8000 ~~
+~~ $ uvicorn app:app --reload --host=0.0.0.0 --port=[포트] ~~
+
+```
 
 
+### main있는 폴더에서 서버 실행
 ```
 $ uvicorn main:app --reload --host=0.0.0.0 --port=8000
 $ uvicorn [py파일]]:[api_name] --reload --host=0.0.0.0 --port=8000
@@ -78,7 +80,10 @@ year  2012~2019
     lnjuredratio = '부상자수 구성비'
 
 ```
+# http://localhost:8000/docs    으로 문서로 확인할 수있음.
 
-
-* #### ex url  :   localhost:8000/child/2013/code 
+* #### ex url  :   localhost:8000/child              =>  딕셔너리 형태
+* #### ex url  :   localhost:8000/child/2013   =>  딕셔너리 형태
+* #### ex url  :   localhost:8000/child/2013/code   =>  리스트 형태
+* 
 
